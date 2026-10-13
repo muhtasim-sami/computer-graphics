@@ -1,0 +1,16 @@
+
+if [[ "$1" == "" ]]; then
+	printf "\n\n\tusage\t:\t$0 <program_file>\n"
+	printf "\te.g.\t:\t$0 test.cpp\n\n"
+	exit 1
+fi
+
+if [[ "$1" == *.cpp ]]; then
+	p=$(echo $1 | sed 's/....$//')
+else
+	p="$1"
+fi
+
+g++ "$p.cpp" -o "$p" -lGL -lGLU -lglut
+chmod +x "$p"
+"./$p"
