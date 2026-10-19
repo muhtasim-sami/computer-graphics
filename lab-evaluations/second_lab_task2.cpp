@@ -13,12 +13,12 @@ void drawCircle(float cx, float cy, float radius,
 {
     glColor3f(r, g, b);
 
-    glLineWidth(20);
+    glLineWidth(5);
     glBegin(GL_LINES);
 	
-        for (int i = 0; i <= 150; i++)
+	for (int i = 0; i <= 100; i++)
         {
-            float angle = 2.0f * 3.14159f * i / 150;
+            float angle = 2.0f * 3.14159f * i / 100;
 		
 	    glVertex2f(cx,cy);
             glVertex2f(
@@ -26,7 +26,19 @@ void drawCircle(float cx, float cy, float radius,
                 cy + radius * sin(angle)
             );
         }
-	
+
+	for (int i = 1; i <= 50; i++)
+        {
+            float angle = 2.0f * 3.14159f * i / 50;
+		
+	    glVertex2f(cx,cy);
+            glVertex2f(
+                cx + radius * cos(angle),
+                cy + radius * sin(angle)
+            );
+        }
+
+
 
     glEnd();
 }
