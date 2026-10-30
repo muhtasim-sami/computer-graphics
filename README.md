@@ -9,6 +9,10 @@ This repository includes all of my tasks and projects in computer graphics cours
     sudo apt update
     sudo apt install build-essential libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev mesa-utils
     ```
+    - For Arch / Blackarch :
+    ```sh
+    sudo pacman -S mesa freeglut glu
+    ```
     > - build-essential: Installs the gcc and g++ compilers needed to compile your code.
     > - freeglut3-dev: This is the main GLUT library for window management and event handling.
     > - libgl1-mesa-dev & libglu1-mesa-dev: These provide the core OpenGL and GLU development files.
